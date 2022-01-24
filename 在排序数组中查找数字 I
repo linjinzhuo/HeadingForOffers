@@ -1,0 +1,11 @@
+统计一个数字在排序数组中出现的次数。
+
+public int search(int[] nums, int target) {
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for (int n :nums) {
+            if (n==target){
+                map.put(n,map.getOrDefault(n,0)+1);
+            }
+        }
+        return map.getOrDefault(target,0);
+    }
