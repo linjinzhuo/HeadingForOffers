@@ -1,0 +1,21 @@
+请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
+
+class Solution {
+    public String replaceSpace(String s) {
+        int len = s.length();
+        char strcs[] = new char[len*3];
+        int index = 0;
+        for(int i = 0;i < len;i++){
+            char c = s.charAt(i);
+            if (c == ' '){
+                strcs[index++] = '%';
+                strcs[index++] = '2';
+                strcs[index++] = '0';
+            }else {
+                strcs[index++] = c;
+            }
+        }
+        String finals = new String(strcs,0,index);
+        return finals;
+    }
+}
